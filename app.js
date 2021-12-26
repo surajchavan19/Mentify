@@ -37,7 +37,7 @@ const userSchema= new mongoose.Schema({
     googleId:String,
     secret:String,
     dash:String
-   
+
 
 })
 const precSchema= new mongoose.Schema({
@@ -46,7 +46,7 @@ const precSchema= new mongoose.Schema({
     age:String,
     history:String,
 
-   
+
 
 })
 const detSchema= new mongoose.Schema({
@@ -54,7 +54,7 @@ const detSchema= new mongoose.Schema({
    prescription:String,
    medicine:String,
 
-   
+
 
 })
 userSchema.plugin(passportLocalMongoose);
@@ -66,7 +66,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(function(user, done) {
     done(null, user.id);
   });
-  
+
   passport.deserializeUser(function(id, done) {
     User.findById(id, function(err, user) {
       done(err, user);
@@ -103,7 +103,7 @@ app.get("/",(req,res)=>{
 })
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile'] }));
-  app.get('/auth/google/home1', 
+  app.get('/auth/google/home1',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
@@ -115,7 +115,7 @@ app.get('/auth/google',
   var ans=" ";
   app.get("/prec",(req,res)=>{
 
-   
+
       res.render("prec" )
   })
   app.get("/doc",(req,res)=>{
@@ -125,7 +125,7 @@ app.get('/auth/google',
         }else{
 
 res.render("doc",{pats:cd})
-           
+
         }
     })
 
@@ -138,8 +138,8 @@ res.render("doc",{pats:cd})
       })
       det.save();
 
-    
-    
+
+
     })
     app.post("/see",(req,res)=>{
 
@@ -149,7 +149,7 @@ res.render("doc",{pats:cd})
                 console.log(er);
             }else{
                 res.render("detail",{pat:cd})
-                
+
             }
         })
     })
@@ -170,6 +170,7 @@ app.get("/registe",(req,res)=>{
     res.render("registlog")
 })
 app.get("/dash",(req,res)=>{
+
     res.render("dashboard")
 })
 
@@ -193,7 +194,7 @@ app.post("/ap",(req,res)=>{
 //           console.log(er);
 //       }else{
 //           if(fd){
-          
+
 //               res.render("secrets",{userWithsecrets : das})
 //           }
 //       }
@@ -209,18 +210,18 @@ User.register({username:req.body.username},req.body.password,(er,fd)=>{
         })
     }
 })
-  
+
 })
 app.get("/admin",(req,res)=>{
     res.render("admin",{link:bk,link1:bk1})
 })
 app.post("/getlink",(req,res)=>{
     const a=req.body.zoom;
- 
+
     zl.push(a)
     res.redirect("/home1")
-  
-  
+
+
 })
 app.get("/book",(req,res)=>{
     res.render("book")
@@ -257,7 +258,7 @@ app.get("/dashboard",(req,res)=>{
             console.log(er);
         }else{
             if(fd){
-               
+
                 res.render("dashboard",{ userWithsecrets : fd})
             }
         }
@@ -329,7 +330,7 @@ app.post("/submit",(req,res)=>{
         if(err){
             console.log(err);
         }else{
-        
+
             if(founduser){
                 founduser.secret=sc;
                 founduser.save(()=>{
@@ -381,7 +382,7 @@ app.post('/upload',upload,function(req,res,next){
        //handling error
        if (err) {
            return console.log('Unable to scan directory: ' + err);
-       } 
+       }
        //listing all files using forEach
        files.forEach(function (file) {
            // Do whatever you want to do with the file
@@ -390,7 +391,7 @@ app.post('/upload',upload,function(req,res,next){
        //    const stat = fs.lstatSync(path.join(__dirname, 'upload'))
        // //    console.log(stat);
        // ff.push(stat)
-   
+
        });
    });
    app.post('/upload1',upload1,function(req,res,next){
@@ -403,7 +404,7 @@ app.post('/upload',upload,function(req,res,next){
        //handling error
        if (err) {
            return console.log('Unable to scan directory: ' + err);
-       } 
+       }
        //listing all files using forEach
        files.forEach(function (file) {
            // Do whatever you want to do with the file
@@ -412,7 +413,7 @@ app.post('/upload',upload,function(req,res,next){
        //    const stat = fs.lstatSync(path.join(__dirname, 'upload'))
        // //    console.log(stat);
        // ff.push(stat)
-   
+
        });
    });
    app.post('/upload2',upload2,function(req,res,next){
@@ -423,7 +424,7 @@ app.post('/upload',upload,function(req,res,next){
        //handling error
        if (err) {
            return console.log('Unable to scan directory: ' + err);
-       } 
+       }
        //listing all files using forEach
        files.forEach(function (file) {
            // Do whatever you want to do with the file
@@ -432,7 +433,7 @@ app.post('/upload',upload,function(req,res,next){
        //    const stat = fs.lstatSync(path.join(__dirname, 'upload'))
        // //    console.log(stat);
        // ff.push(stat)
-   
+
        });
    });
    app.post("/fr",(req,res)=>{
