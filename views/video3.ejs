@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ae8f1db1af.js" crossorigin="anonymous"></script>
+    <title>DSA IN JAVA Courses</title>
+    <style>
+   .row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: rgb(69, 103 , 163);
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+p{
+  color: #ffffff;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #ffffff;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+        
+        a:hover
+{
+    color: aqua;
+    text-decoration: none;
+
+}
+a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+       .flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+background-color: #EAF4FE;
+    /* margin: 26px;
+    padding: 12px; */
+    margin-top: -3vh;
+    height: 600px;
+  
+    /* border: 2px solid black; */
+  }
+  
+  .flex-item-left {
+    background: transparent;
+    padding: 18px;
+    flex: 50%;
+    margin: 3px;
+    /* border: 2px solid black; */
+  }
+  
+  .flex-item-right {
+    background: transparent;
+    padding: 18px;
+    margin: 3px;
+    /* border: 2px solid black; */
+    flex: 50%;
+  }
+  
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  
+  }
+    </style>
+  </head>
+  <body style="width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light " >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/ide" style="color: #0051ed; font-weight: bold; ">Practice</a>
+          <a class="navbar-brand" href="    http://127.0.0.1:5500/index.html" style="color: #0051ed; font-weight: bold; ">Quiz</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" style="margin-left: 20vh; margin-top: 1vh; ">
+                <input type="text"  style="border-radius: 5px; margin-top: 2vh; height: 5vh; border:1.5px solid grey" placeholder="Search Courses">
+              </li>
+              <li class="nav-item  ml-auto" >
+                <svg width="120" height="45" viewBox="0 0 166 46" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 45vh; margin-top:2vh; " >
+                  <path d="M12.3516 29.8203L6.84375 7.92969V31.6484C6.84375 32.9609 6.54688 33.9453 5.95312 34.6016C5.375 35.2578 4.60156 35.5859 3.63281 35.5859C2.69531 35.5859 1.92969 35.2656 1.33594 34.625C0.742188 33.9688 0.445312 32.9766 0.445312 31.6484V4.46094C0.445312 2.96094 0.835938 1.95312 1.61719 1.4375C2.39844 0.90625 3.45312 0.640625 4.78125 0.640625H6.9375C8.23438 0.640625 9.17188 0.757812 9.75 0.992188C10.3438 1.22656 10.7812 1.64844 11.0625 2.25781C11.3438 2.86719 11.6641 3.85937 12.0234 5.23438L17.0156 24.0547L22.0078 5.23438C22.3672 3.85937 22.6875 2.86719 22.9688 2.25781C23.25 1.64844 23.6797 1.22656 24.2578 0.992188C24.8516 0.757812 25.7969 0.640625 27.0938 0.640625H29.25C30.5781 0.640625 31.6328 0.90625 32.4141 1.4375C33.1953 1.95312 33.5859 2.96094 33.5859 4.46094V31.6484C33.5859 32.9609 33.2891 33.9453 32.6953 34.6016C32.1172 35.2578 31.3359 35.5859 30.3516 35.5859C29.4297 35.5859 28.6719 35.2578 28.0781 34.6016C27.4844 33.9453 27.1875 32.9609 27.1875 31.6484V7.92969L21.6797 29.8203C21.3203 31.2422 21.0234 32.2891 20.7891 32.9609C20.5703 33.6172 20.1562 34.2188 19.5469 34.7656C18.9375 35.3125 18.0938 35.5859 17.0156 35.5859C16.2031 35.5859 15.5156 35.4062 14.9531 35.0469C14.3906 34.7031 13.9531 34.2578 13.6406 33.7109C13.3281 33.1641 13.0781 32.5625 12.8906 31.9062C12.7188 31.2344 12.5391 30.5391 12.3516 29.8203ZM58.1484 24.1484H45.6328C45.6484 25.6016 45.9375 26.8828 46.5 27.9922C47.0781 29.1016 47.8359 29.9375 48.7734 30.5C49.7266 31.0625 50.7734 31.3438 51.9141 31.3438C52.6797 31.3438 53.375 31.2578 54 31.0859C54.6406 30.8984 55.2578 30.6172 55.8516 30.2422C56.4453 29.8516 56.9922 29.4375 57.4922 29C57.9922 28.5625 58.6406 27.9688 59.4375 27.2188C59.7656 26.9375 60.2344 26.7969 60.8438 26.7969C61.5 26.7969 62.0312 26.9766 62.4375 27.3359C62.8438 27.6953 63.0469 28.2031 63.0469 28.8594C63.0469 29.4375 62.8203 30.1172 62.3672 30.8984C61.9141 31.6641 61.2266 32.4062 60.3047 33.125C59.3984 33.8281 58.25 34.4141 56.8594 34.8828C55.4844 35.3516 53.8984 35.5859 52.1016 35.5859C47.9922 35.5859 44.7969 34.4141 42.5156 32.0703C40.2344 29.7266 39.0938 26.5469 39.0938 22.5312C39.0938 20.6406 39.375 18.8906 39.9375 17.2812C40.5 15.6562 41.3203 14.2656 42.3984 13.1094C43.4766 11.9531 44.8047 11.0703 46.3828 10.4609C47.9609 9.83594 49.7109 9.52344 51.6328 9.52344C54.1328 9.52344 56.2734 10.0547 58.0547 11.1172C59.8516 12.1641 61.1953 13.5234 62.0859 15.1953C62.9766 16.8672 63.4219 18.5703 63.4219 20.3047C63.4219 21.9141 62.9609 22.9609 62.0391 23.4453C61.1172 23.9141 59.8203 24.1484 58.1484 24.1484ZM45.6328 20.5156H57.2344C57.0781 18.3281 56.4844 16.6953 55.4531 15.6172C54.4375 14.5234 53.0938 13.9766 51.4219 13.9766C49.8281 13.9766 48.5156 14.5312 47.4844 15.6406C46.4688 16.7344 45.8516 18.3594 45.6328 20.5156ZM74.6484 13.1094V13.8828C75.7734 12.3984 77 11.3125 78.3281 10.625C79.6719 9.92188 81.2109 9.57031 82.9453 9.57031C84.6328 9.57031 86.1406 9.9375 87.4688 10.6719C88.7969 11.4062 89.7891 12.4453 90.4453 13.7891C90.8672 14.5703 91.1406 15.4141 91.2656 16.3203C91.3906 17.2266 91.4531 18.3828 91.4531 19.7891V31.6953C91.4531 32.9766 91.1562 33.9453 90.5625 34.6016C89.9844 35.2578 89.2266 35.5859 88.2891 35.5859C87.3359 35.5859 86.5625 35.25 85.9688 34.5781C85.375 33.9062 85.0781 32.9453 85.0781 31.6953V21.0312C85.0781 18.9219 84.7812 17.3125 84.1875 16.2031C83.6094 15.0781 82.4453 14.5156 80.6953 14.5156C79.5547 14.5156 78.5156 14.8594 77.5781 15.5469C76.6406 16.2188 75.9531 17.1484 75.5156 18.3359C75.2031 19.2891 75.0469 21.0703 75.0469 23.6797V31.6953C75.0469 32.9922 74.7422 33.9688 74.1328 34.625C73.5391 35.2656 72.7656 35.5859 71.8125 35.5859C70.8906 35.5859 70.1328 35.25 69.5391 34.5781C68.9453 33.9062 68.6484 32.9453 68.6484 31.6953V13.2031C68.6484 11.9844 68.9141 11.0781 69.4453 10.4844C69.9766 9.875 70.7031 9.57031 71.625 9.57031C72.1875 9.57031 72.6953 9.70312 73.1484 9.96875C73.6016 10.2344 73.9609 10.6328 74.2266 11.1641C74.5078 11.6953 74.6484 12.3438 74.6484 13.1094ZM121.266 13.2031V31.6953C121.266 32.9766 120.961 33.9453 120.352 34.6016C119.742 35.2578 118.969 35.5859 118.031 35.5859C117.094 35.5859 116.328 35.25 115.734 34.5781C115.156 33.9062 114.867 32.9453 114.867 31.6953V13.3906C114.867 12.125 115.156 11.1719 115.734 10.5312C116.328 9.89062 117.094 9.57031 118.031 9.57031C118.969 9.57031 119.742 9.89062 120.352 10.5312C120.961 11.1719 121.266 12.0625 121.266 13.2031ZM118.102 6.59375C117.211 6.59375 116.445 6.32031 115.805 5.77344C115.18 5.22656 114.867 4.45313 114.867 3.45312C114.867 2.54687 115.188 1.80469 115.828 1.22656C116.484 0.632813 117.242 0.335938 118.102 0.335938C118.93 0.335938 119.664 0.601562 120.305 1.13281C120.945 1.66406 121.266 2.4375 121.266 3.45312C121.266 4.4375 120.953 5.21094 120.328 5.77344C119.703 6.32031 118.961 6.59375 118.102 6.59375ZM127.383 10.1328H128.906V8.21094C128.906 6.21094 129.156 4.625 129.656 3.45312C130.172 2.26562 131.031 1.40625 132.234 0.875C133.453 0.328125 135.117 0.0546875 137.227 0.0546875C140.961 0.0546875 142.828 0.96875 142.828 2.79688C142.828 3.39062 142.633 3.89844 142.242 4.32031C141.852 4.74219 141.391 4.95312 140.859 4.95312C140.609 4.95312 140.18 4.90625 139.57 4.8125C138.961 4.71875 138.445 4.67188 138.023 4.67188C136.867 4.67188 136.125 5.01562 135.797 5.70312C135.469 6.375 135.305 7.34375 135.305 8.60938V10.1328H136.875C139.312 10.1328 140.531 10.8672 140.531 12.3359C140.531 13.3828 140.203 14.0469 139.547 14.3281C138.906 14.6094 138.016 14.75 136.875 14.75H135.305V31.6953C135.305 32.9609 135 33.9297 134.391 34.6016C133.797 35.2578 133.023 35.5859 132.07 35.5859C131.164 35.5859 130.406 35.2578 129.797 34.6016C129.203 33.9297 128.906 32.9609 128.906 31.6953V14.75H127.148C126.195 14.75 125.461 14.5391 124.945 14.1172C124.43 13.6797 124.172 13.1172 124.172 12.4297C124.172 10.8984 125.242 10.1328 127.383 10.1328ZM149.789 36.3828L150.375 34.9531L142.5 15.125C142.016 13.9844 141.773 13.1562 141.773 12.6406C141.773 12.0938 141.914 11.5859 142.195 11.1172C142.477 10.6484 142.859 10.2734 143.344 9.99219C143.844 9.71094 144.359 9.57031 144.891 9.57031C145.812 9.57031 146.508 9.86719 146.977 10.4609C147.445 11.0391 147.859 11.875 148.219 12.9688L153.633 28.7188L158.766 14.0703C159.172 12.8828 159.539 11.9531 159.867 11.2812C160.195 10.6094 160.539 10.1562 160.898 9.92188C161.273 9.6875 161.797 9.57031 162.469 9.57031C162.953 9.57031 163.414 9.70312 163.852 9.96875C164.305 10.2188 164.648 10.5625 164.883 11C165.133 11.4375 165.258 11.8984 165.258 12.3828C165.195 12.6797 165.094 13.1016 164.953 13.6484C164.812 14.1953 164.641 14.75 164.438 15.3125L156.094 37.1562C155.375 39.0781 154.672 40.5859 153.984 41.6797C153.297 42.7734 152.383 43.6094 151.242 44.1875C150.117 44.7812 148.594 45.0781 146.672 45.0781C144.797 45.0781 143.391 44.875 142.453 44.4688C141.516 44.0625 141.047 43.3203 141.047 42.2422C141.047 41.5078 141.266 40.9375 141.703 40.5312C142.156 40.1406 142.82 39.9453 143.695 39.9453C144.039 39.9453 144.375 39.9922 144.703 40.0859C145.109 40.1797 145.461 40.2266 145.758 40.2266C146.492 40.2266 147.07 40.1172 147.492 39.8984C147.914 39.6797 148.289 39.2969 148.617 38.75C148.961 38.2188 149.352 37.4297 149.789 36.3828Z" fill="black"/>
+                  <path d="M98.2031 10.1328H98.9062V6.28906C98.9062 5.25781 98.9297 4.45313 98.9766 3.875C99.0391 3.28125 99.1953 2.77344 99.4453 2.35156C99.6953 1.91406 100.055 1.5625 100.523 1.29688C100.992 1.01562 101.516 0.875 102.094 0.875C102.906 0.875 103.641 1.17969 104.297 1.78906C104.734 2.19531 105.008 2.69531 105.117 3.28906C105.242 3.86719 105.305 4.69531 105.305 5.77344V10.1328H107.648C108.555 10.1328 109.242 10.3516 109.711 10.7891C110.195 11.2109 110.438 11.7578 110.438 12.4297C110.438 13.2891 110.094 13.8906 109.406 14.2344C108.734 14.5781 107.766 14.75 106.5 14.75H105.305V26.5156C105.305 27.5156 105.336 28.2891 105.398 28.8359C105.477 29.3672 105.664 29.8047 105.961 30.1484C106.273 30.4766 106.773 30.6406 107.461 30.6406C107.836 30.6406 108.344 30.5781 108.984 30.4531C109.625 30.3125 110.125 30.2422 110.484 30.2422C111 30.2422 111.461 30.4531 111.867 30.875C112.289 31.2812 112.5 31.7891 112.5 32.3984C112.5 33.4297 111.938 34.2188 110.812 34.7656C109.688 35.3125 108.07 35.5859 105.961 35.5859C103.961 35.5859 102.445 35.25 101.414 34.5781C100.383 33.9062 99.7031 32.9766 99.375 31.7891C99.0625 30.6016 98.9062 29.0156 98.9062 27.0312V14.75H98.0625C97.1406 14.75 96.4375 14.5312 95.9531 14.0938C95.4688 13.6562 95.2266 13.1016 95.2266 12.4297C95.2266 11.7578 95.4766 11.2109 95.9766 10.7891C96.4922 10.3516 97.2344 10.1328 98.2031 10.1328Z" fill="#174BCF"/>
+                  </svg>
+              </li>
+              <div class="dropdown" style="margin-left: 200px; margin-top: 2vh;">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-bullhorn" style="color: #0051ed; font-size: 20px;">Alerts</i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li> <% for(var i=0;i<link.length;i++){  %>
+                    <div class="spinner-grow text-success" role="status" >
+                      <span class="visually-hidden">Loading...</span>
+                    </div><h2><%= link[i] %></h2>
+                    <% } %></li>
+                  
+                </ul>
+              </div>
+              <li class="nav-item  ml-auto" style="margin-top: 2vh; font-weight: bold;" >
+                
+                <a class="nav-link " href="#" style="margin-left: 5vh; color: #0051ed;" class="gradient-border" type="button"  data-bs-toggle="modal" >Welcome User!</a>
+              </li>
+              <li class="nav-item ml-auto" style="margin-top: 2vh; font-weight: bold;">
+                <a class="nav-link" href="/logout"  style="color: #0051ed;">Log Out </a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+       
+            </span>
+          </div>
+        </div>
+      </nav>
+      <hr>
+      <div class="co" style="background-color: #EAF4FE; margin-top: -2.5vh;">
+        <h2 style="text-align: center; color: black; font-weight: bold; padding-top: 5px;">DSA IN JAVA</h2>
+      <% for(var i=0;i<he2.length;i++){ %>
+        <div class="ss" style="margin-left: 38vh;">
+        <video width="800" height="500" controls="controls autoplay">
+
+    
+          <source src="upload2/<%=he2[i] %>" type="video/mp4" />
+         
+        </div>
+        </video>
+        <div class="but-pad">
+            <div class="btn-group" style="margin-left: 45vh; margin-top: 4vh;">
+                <a href="#apple" data-hash="2"><button >   <i class="fa fa-download" style="font-size:30px;"> Resources</i></button></a> 
+                 
+   
+                 </div>
+               </div>
+   
+           <% } %>
+        <br>
+        <br>
+      </div>
+     
+        <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="footer-col">
+                
+            
+                  <h4>Courses</h4>
+                  <ul>
+                    <li><a href="/videof">WEB Development</a></li>
+                    <li><a href="/video1">C++ </a></li>
+                    <li><a href="/video2">DSA IN JAVA</a></li>
+                    <br>
+                    <br>
+                    <br><br><br>
+                    <li><img src="css/Webify.png" width="110px" height="40px" alt=""></li>
+                    
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Features</h4>
+                  <ul>
+                    <li><a href="/ide">Web IDE</a></li>
+                    <li><a href="http://localhost:800/">Discussion Forum</a></li>
+                    <li><a href="#">Live Streaming</a></li>
+                    <li><a href="https://hidden-island-71466.herokuapp.com/">Daily Updates</a></li>
+                    <li><a href="/video1">Resources Access</a></li>
+                    <li><a href="#">Quiz Section</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Additional Info</h4>
+                  <ul>
+                    <li><a href="#">T&C</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <p>Webify is an educational website that will help you become a full-stack web developer with courses tailored for anyone and everyone - a beginner can start learning from scratch & a novice and brush up on their skills.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </footer>
+         
+            <!-- Optional JavaScript; choose one of the two! -->
+        
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://kit.fontawesome.com/ae8f1db1af.js" crossorigin="anonymous"></script>
+      </body>
+      </html>

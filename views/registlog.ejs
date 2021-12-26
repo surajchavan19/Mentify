@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN | Webify</title>
+</head>
+<body>
+    SELECT AN OPTION :
+    <style>
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: rgb(6, 22, 240);
+            color: rgb(255, 184, 31);
+            padding: 20px 24px;
+            margin: 8px 0;
+            cursor: pointer;
+            border-radius: 6px;
+            
+            
+            
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .cancelbtn:hover {
+
+            transform: scale(1.05);
+            transform: translateY(5px);
+            transition:0.5s ease-in;
+            padding: 14px 20px;
+            background-color: rgb(23, 145, 245);
+            color: rgb(5, 59, 109);
+        }
+       .signupbtn:hover {
+
+            transform: scale(1.05);
+            transform: translateY(5px);
+            transition:0.5s ease-in;
+            padding: 14px 20px;
+            background-color: rgb(23, 145, 245);
+            color: rgb(5, 59, 109);
+        }
+        .cancelbtn,
+        .signupbtn {
+            background-color:  linear-gradient(to bottom, #ffff66 0%, #ff9900 100%);;
+            float: left;
+            width: 50%
+        }
+        
+        .container {
+            padding: 16px;
+        }
+        
+         
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        
+         
+        .modal-content {
+            background: linear-gradient(to top right, #ffcc00 0%, #ff6600 100%);
+            margin: 5% auto 15% auto;
+            border: 2px linear-gradient(90deg, rgba(5,11,32,1) 0%, rgba(0,1,9,1) 0%, rgba(26,161,190,1) 0%, rgba(255,255,255,1) 0%, rgba(33,101,215,1) 0%, rgba(11,126,149,1) 0%, rgba(40,36,140,1) 100%, rgba(4,33,40,1) 100%, rgba(27,23,111,1) 100%, rgba(49,79,149,1) 100%, rgba(68,66,122,1) 100%);
+            width: 80%;
+            color: rgb(4, 0, 255) ;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       
+         
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            color: #000;
+            font-size: 40px;
+            font-weight: bold;
+        }
+       
+         
+        .close:hover,
+        .close:focus {
+            color: rgb(4, 0, 255);
+            cursor: pointer;
+        }
+         
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+         
+        @media screen and (max-width: 300px) {
+            .cancelbtn,
+            .signupbtn {
+                width: 100%;
+            }
+        }
+        :-ms-input-placeholder
+        {
+            height: 20px;
+        }
+        
+        
+    </style>
+     
+    
+     
+        
+       
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
+     
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content animate" action="/login" method="POST">
+                <div class="container">
+                    <label><b>Enter your Webify E-mail</b></label>
+                    <input type="text" placeholder="Enter Email" name="username" required>
+     
+                    <label><b>Enter your Webify Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+     
+                    
+                    <input type="checkbox"> Remember me
+                    
+     
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">CANCEL</button>
+                        <button type="submit" class="signupbtn">LOGIN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+     
+       
+        <script>
+            var modal = document.getElementById('id01');
+     
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">REGISTER</button>
+     
+        <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content animate" action="/register" method="POST">
+                <div class="container">
+                    <p><label><b> NAME</b></label>
+                    <input type="text" placeholder="Enter Name" name="Name" required></p>
+
+                    <p><label><b>VALID ADDRESS</b></label>
+                    <input type="text" placeholder="Enter Address" name="Name" required></p>
+                    
+
+                    <p><label><b>VALID E-MAIL</b></label>
+                    <input type="email" style="width: 380px; height: 35px;" placeholder="Enter Email" name="username" required></p>
+
+                    <p><label><b>MOBILE NUMBER</b></label>
+                    <input type="number" style="width: 380px; height: 35px;" placeholder="Enter mobile no." name="number" required></p>
+                    
+     
+                    <p><label><b>SET A PASSWORD</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required></p>
+     
+                    <label><b>REPEAT PASSWORD</b></label>
+                    <input type="password" placeholder="Repeat Password" name="password" required>
+                    <input type="checkbox"> Remember me
+                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+     
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">CANCEL</button>
+                        <button type="submit" class="signupbtn">REGISTER</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+     
+       
+        <script>
+            var modal = document.getElementById('id02');
+     
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        
+     
+    </body>
+     
+    </html>
+  
+    

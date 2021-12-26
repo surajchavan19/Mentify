@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    background: linear-gradient(90deg, rgba(5,11,32,1) 0%, rgba(0,1,9,1) 0%, rgba(26,161,190,1) 0%, rgba(255,255,255,1) 0%, rgba(33,101,215,1) 0%, rgba(11,126,149,1) 0%, rgba(40,36,140,1) 100%, rgba(4,33,40,1) 100%, rgba(27,23,111,1) 100%, rgba(49,79,149,1) 100%, rgba(68,66,122,1) 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+     margin: 0;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 20px;
+    z-index: 10000;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    transition: 0.6s;
+    font-family: 'Acme', sans-serif;
+}
+
+header .logo span{
+color: orange;
+font-family: 'Acme', sans-serif;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    font-family: 'Monda', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500  ;
+    transition:0.6s;
+}
+
+header ul li a:hover{
+    color: orange;
+   transition:0.1s;
+    
+}
+
+header.sticky{
+ background-color: rgb(31, 30, 30);  
+ height: 60px;
+    
+}
+
+header.sticky .logo{
+    font-size: 25px;
+    color: orange;
+}
+header.sticky .logo span{
+    color: white;
+}
+
+header.sticky ul li a{
+
+    font-size: 15px;
+    font-weight: bold;
+    color: orange;
+    
+    
+
+}
+
+header.sticky ul li{
+    margin-top: 15px;
+}
+
+header.sticky ul li a:hover{
+    color: white;
+}
+
+.banner{
+    position: relative;
+    top: 50px;
+    height: 75vh;
+    display: flex;
+    
+}
+
+section .left i{
+color: white;
+
+
+}
+
+
+
+section .left{
+    width: 65vw;
+    display: flex;
+justify-content:end;
+align-items: center;
+    
+}
+
+section .right{
+    width: 60vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.banner .right{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: start;
+padding: 15px;
+}
+
+section .right h1{
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 3px;
+  font-size: 120px;
+
+}
+
+section .right #typed{
+    display: flex;
+    justify-content: center;
+    color: orange;
+    font-size: 53px;
+    font-family: 'Carattere', cursive;
+}
+
+section .register_buttons{
+    position: relative;
+    top: 65vh;
+    right: 39vw
+    
+}
+
+section .register_buttons .btn{
+    display: flex;
+    
+    
+}
+
+section .register_buttons .btn button{
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+   border-radius: 6px;
+   margin-left: 30px;
+   border: 3px solid orange;
+  
+   
+    
+}
+
+section .register_buttons .btn button a{
+    text-decoration: none;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: rgb(65, 62, 62);
+    font-weight: 700;
+  
+}
+
+section .register_buttons .btn button:hover{
+
+    background-color: orange;
+   
+
+}
+section .register_buttons .btn button a:hover{
+    color: white !important;
+}

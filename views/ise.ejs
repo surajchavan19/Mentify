@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ide.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+
+
+
+</head>
+<body id="sachin" style="background: black;">
+  <div class="row">
+  <div class="column">
+    <h1 style="color: red;" >HTML</h1>
+  </div>
+  <div class="column">
+  <h1 style="color: blue;">CSS</h1>
+  </div>
+  <div class="column">
+  <h1 style="color: yellow;">JS</h1>
+  </div>
+</div>
+    <div class="editor ">
+
+
+
+          <textarea  id="html-code" name="code"></textarea>
+
+
+              <textarea  id="css-code"></textarea>
+
+
+          <textarea  id="js-code"></textarea>
+
+
+
+
+
+        <iframe id="output" class="answer" style="width: 97.8%; height:100vh;margin-left:1%;"></iframe>
+
+    </div>
+    <!-- <button onclick="run()">RUN</button> -->
+    <div class="button">
+
+
+   
+    <a href="#" id="but" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Save Image
+    </a>
+
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" charset="utf-8"></script>
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawingboard.js/0.4.2/drawingboard.min.js" charset="utf-8"></script>
+<script>
+
+function run(){
+    let html=document.querySelector(".editor #html-code").value;
+    let css="<style>"+document.querySelector(".editor #css-code").value+"</style>";
+    let java=document.querySelector(".editor #js-code").value;
+let output=document.querySelector(".editor #output");
+// console.log(html,css,js,output);
+output.contentDocument.body.innerHTML=html+css;
+output.contentWindow.eval(java);
+}
+document.querySelector(".editor #html-code").addEventListener("keyup",run);
+document.querySelector(".editor #css-code").addEventListener("keyup",run);
+document.querySelector(".editor #js-code").addEventListener("keyup",run);
+
+</script>
+<script>
+ $(document).ready(function(){
+  $("#but").click(function(){
+    domtoimage.toBlob(document.getElementById('sachin'))
+  .then(function (blob) {
+      window.saveAs(blob, 'photo.png');
+  });
+  })
+})
+
+</script>
+</html>
