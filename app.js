@@ -448,6 +448,6 @@ app.post('/upload',upload,function(req,res,next){
     console.log(fr);
     res.redirect("/video")
 })
-app.listen(80,()=>{
+app.listen(80 || process.env.PORT,()=>{
     console.log("succes");
 })
