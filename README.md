@@ -18,3 +18,5 @@ And if a person is fully fine then there is a section where people may make frie
 3) Open the terminal
 4) Type node app.js / nodemon app.js
 5) Open localhost on your browser
+
+Type /admin to open admin portal
