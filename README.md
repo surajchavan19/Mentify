@@ -28,5 +28,8 @@ And if a person is fully fine then there is a section where people may make frie
    ```
    http://localhost/
    ```
+7) To view the admin portal use
+   ```
+   http://localhost/admin
+   ```
 
-Type /admin to open admin portal
