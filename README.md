@@ -14,13 +14,19 @@ There will be a section for offline therapy, a book store, a quotes zone, and a 
 And if a person is fully fine then there is a section where people may make friends and discuss their opinions with one another, allowing people to become more open to the community and voice their thoughts openly in a physical setting.
 ## Setup
 1) Download the .zip file or copy the repository on github
-2) Open the folder
+2) Open the folder on your code editor
 3) Open the terminal
-4) Download the packages
+4) Download the packages using
    ```
    npm i
    ```
-5) Type node app.js / nodemon app.js
-6) Open localhost on your browser
+5) Type the following on the terminal to start the application
+   ```
+   node app.js or nodemon app.js
+   ```
+6) To view the application open the browser and type the following
+   ```
+   http://localhost/
+   ```
 
 Type /admin to open admin portal
