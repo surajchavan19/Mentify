@@ -17,7 +17,8 @@ And if a person is fully fine then there is a section where people may make frie
 2) Open the folder
 3) Open the terminal
 4) Download the packages
-   ```npm i
+   ```
+   npm i
    ```
 5) Type node app.js / nodemon app.js
 6) Open localhost on your browser
