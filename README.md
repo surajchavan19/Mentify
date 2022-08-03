@@ -16,7 +16,10 @@ And if a person is fully fine then there is a section where people may make frie
 1) Download the .zip file or copy the repository on github
 2) Open the folder
 3) Open the terminal
-4) Type node app.js / nodemon app.js
-5) Open localhost on your browser
+4) Download the packages
+   ```npm i
+   ```
+5) Type node app.js / nodemon app.js
+6) Open localhost on your browser
 
 Type /admin to open admin portal
